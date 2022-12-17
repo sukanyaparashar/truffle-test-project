@@ -18,8 +18,4 @@ contract Factory {
    function gfGetter(uint256 _greeterIndex) public view returns (string memory) {
     return Greeter(address(GreeterArray[_greeterIndex])).greet();
    }
-
-   function bad() public {
-     revert("I am a failure");
-   }
 }
