@@ -2,18 +2,22 @@
 pragma solidity 0.8.17;
 
 contract Sample {
-  uint storedData;
+  uint256 storedData;
 
-  constructor(uint _a) {
+  constructor(uint256 _a) {
     storedData = _a;
   }
 
-  function get() public view returns (uint) {
+  function get() public view returns (uint256) {
     return storedData;
   }
 
-  function get(uint y) public view returns (uint) {
-    return storedData + y;
+  function get(uint256 x) public view returns (uint256) {
+    return storedData + x;
+  }
+
+  function get(uint256 x, uint256 y) public view returns (uint256) {
+    return storedData + x + y;
   }
 
   function bad() public pure {
