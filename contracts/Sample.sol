@@ -2,9 +2,9 @@
 pragma solidity 0.8.17;
 
 contract Sample {
-  uint256 storedData;
+  uint256 public storedData;
 
-  constructor(uint256 _a) {
+  constructor(uint256 _a) public {
     storedData = _a;
   }
 
@@ -20,7 +20,7 @@ contract Sample {
     return storedData + x;
   }
 
-  function get(string memory s) public view returns (string memory) {
+  function get(string memory s) public pure returns (string memory) {
     return s;
   }
 
@@ -41,7 +41,7 @@ contract Sample {
     y = storedData + x;
   }
 
-  function getMultipleValues() public view returns (string memory, uint256) {
+  function getMultipleValues() public pure returns (string memory, uint256) {
     return ("truffle", 20);
   }
 }
